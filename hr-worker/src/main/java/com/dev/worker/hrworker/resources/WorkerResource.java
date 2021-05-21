@@ -20,7 +20,7 @@ public class WorkerResource {
 	private WorkerRepository repository;
 	
 	@GetMapping
-	public ResponseEntity<List<Worker>> findAll(){
+	public ResponseEntity<List<Worker>> findAll() {
 		
 		List<Worker> list = repository.findAll();
 		
@@ -28,7 +28,7 @@ public class WorkerResource {
 	}
 	
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<Worker> findById(@PathVariable Long id){
+	public ResponseEntity<Worker> findById(@PathVariable Long id) {
 		
 		Worker obj = repository.findById(id).get();
 		
